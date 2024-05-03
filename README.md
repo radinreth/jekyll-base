@@ -6,4 +6,6 @@
 
 Fresh Jekyll install from running "jekyll new ..."
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4f4ab6f5-9348-4717-8756-9494e13aac7f/deploy-status)](https://app.netlify.com/sites/radin-reth/deploys)
+
 https://app.netlify.com/sites/idyllic-parfait-a10018
