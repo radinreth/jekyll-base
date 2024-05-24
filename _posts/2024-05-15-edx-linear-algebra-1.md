@@ -14,12 +14,14 @@ tabs: true
 
 ### Lesson 1: Solutions Sets of Linear Equations
 
-Form of linear equation
-a_1x_1 + a_2x_2 + ... + a_nx_n = b
+{% katexmm %}
 
-a_1, a_2, ..., a_n = coefficients
-b = constant
-x_1, x_2, ..., x_n = variables / unknowns
+Form of linear equation
+$a_1x_1 + a_2x_2 + ... + a_nx_n = b$
+
+$a_1, a_2, ..., a_n$ = coefficients
+$b$ = constant
+$x_1, x_2, ..., x_n$ = variables / unknowns
 
 A system of linear equations are set of linear equations.
 Solutions sets are set of solutions that solve all linear equations.
@@ -209,11 +211,9 @@ If, $A\vec x=\vec 0$ has <b>non-trivial solution</b>
 <u>Example</u>: A homogeneous system have non-trivial solution because it has free variable.
 
 $$
-\begin{align}
 x_1+3x_2+x_3=0 \\
 2x_1-x_2-5x_3=0 \\
 x_1-2x_3=0
-\end{align}
 $$
 
 1. Augmented matrix
@@ -268,22 +268,23 @@ $$
 
 1. Augmented matrix
 
-   $$
-   \begin{pmatrix}
-   1 & 3 & 1 & 4 \\
-   2 & -1 & -5 & 1 \\
-   1 & 0 & -2 & 1 \\
-   \end{pmatrix}
-   $$
+$$
+\begin{pmatrix}
+1 & 3 & 1 & 4 \\
+2 & -1 & -5 & 1 \\
+1 & 0 & -2 & 1 \\
+\end{pmatrix}
+$$
 
 2. RREF
-   $$
-   \begin{pmatrix}
-   1 & 0 & -2 & 1 \\
-   0 & 1 & 1 & 1 \\
-   0 & 0 & 0 & 0 \\
-   \end{pmatrix}
-   $$
+
+$$
+\begin{pmatrix}
+1 & 0 & -2 & 1 \\
+0 & 1 & 1 & 1 \\
+0 & 0 & 0 & 0 \\
+\end{pmatrix}
+$$
 
 $\therefore$ <u>Solution set</u>
 
@@ -838,3 +839,5 @@ Linear transformation $T : \R^n \to \R^m$ is <b>onto</b> if for all $\vec b \in 
 
 - has at most 1 solution (possibly no)
 - every columns are pivotal
+
+{% endkatexmm %}
