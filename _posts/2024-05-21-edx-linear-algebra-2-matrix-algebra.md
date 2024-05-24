@@ -14,6 +14,8 @@ tabs: true
 
 ### Lesson 1: Matrix Addition and Scalar Multiplication
 
+{% katexmm %}
+
 <b>Zero</b> matrix : all entries are <b>0</b>.
 
 $$
@@ -351,3 +353,5 @@ Topic 3: Dimension and Rank
 Lesson 1: Coordinate Systems
 Lesson 2: The Dimension of a Susbpsace
 Lesson 3: Rank and Invertibility
+
+{% endkatexmm %}
