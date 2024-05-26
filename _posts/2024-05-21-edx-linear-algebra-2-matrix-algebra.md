@@ -333,9 +333,124 @@ Let $A$ is $n \times n$ matrix.
 9. right inverse $AA^{-1}=I_n$
 10. $A^T$ is invertible
 
-Topic 2: Application: Partitioned Matrices
-Lesson 1: Partitioned Matrices and Matrix Multiplication
-Lesson 2: Partitioned Matrices and the Matrix Inverse
+<u>Example</u> Identify if a matrix is inverse.
+
+$$
+\begin{pmatrix}
+1 & 0 & -2 \\
+3 & 1 & -2 \\
+0 & -1 & -1
+\end{pmatrix}
+$$
+
+1. reduce row and check if all columns are <b>pivotal</b>
+
+## Topic 2: Application: Partitioned Matrices
+
+### Lesson 1: Partitioned Matrices and Matrix Multiplication
+
+I. Partitioned matrix
+
+$$
+A=\begin{pmatrix}
+3&1&4&1&0 \\
+1&6&1&0&1 \\
+0&0&0&4&2 \\
+\end{pmatrix}
+\\
+A=\begin{pmatrix}
+\begin{pmatrix}3&1&4\\1&6&1\end{pmatrix}
+\begin{pmatrix}1&0\\0&1\end{pmatrix}
+\\
+\begin{pmatrix}0&0&0\end{pmatrix}
+\begin{pmatrix}4&2\end{pmatrix}
+\end{pmatrix}
+=\begin{pmatrix}
+A_{1,1} & A_{1,2} \\
+A_{2,1} & A_{2,2}
+\end{pmatrix}
+$$
+
+$\ast$ Partitioned matrix gives succint representation.
+Useful when study <b>null space</b> of $A$.
+
+$$
+\begin{pmatrix}
+1 & 0 & 0 & * & \cdots & * \\
+0 & 1 & 0 & * & \cdots & * \\
+0 & 0 & 1 & * & \cdots & * \\
+0 & 0 & 0 & 0 & \cdots & 0 \\
+0 & 0 & 0 & 0 & \cdots & 0 \\
+\end{pmatrix} =
+\begin{pmatrix}
+I_3 & F \\
+0 & 0
+\end{pmatrix}
+$$
+
+Example:
+
+$$
+AB = \begin{pmatrix}
+1&0&1\\
+0&1&1
+\end{pmatrix} \begin{pmatrix}
+2&-1 \\
+0&-1 \\
+0&1
+\end{pmatrix} = \begin{pmatrix}
+I_3 & X
+\end{pmatrix} \begin{pmatrix} U \\ Y \end{pmatrix} \\
+$$
+
+$$
+I=\begin{pmatrix}1&0\\0&1\end{pmatrix}
+X=\begin{pmatrix}1\\1\end{pmatrix}
+U=\begin{pmatrix}2&-1\\0&-1\end{pmatrix}
+Y=\begin{pmatrix}0&1\end{pmatrix} \\
+$$
+
+$\ast$ Solved by using <u>row column method</u>.
+$\rArr \bold{I_3U + XY}$
+
+### Lesson 2: Partitioned Matrices and the Matrix Inverse
+
+I. Compute inverse of $\begin{pmatrix}A & B\\0 & C\end{pmatrix}$
+
+$$
+\begin{pmatrix}A & B\\0 & C\end{pmatrix}
+\textcolor{red}{\begin{pmatrix}W & X\\Y & Z\end{pmatrix}} =
+I=\begin{pmatrix}I_n & 0\\0 & I_n\end{pmatrix}
+$$
+
+1. $0W+CY=0$
+   $CY=0 \\
+\to C^{-1}CY=C^{-1}0 \\
+\to \boxed{Y=0}$
+
+2. $0X+CZ=I$
+   $CZ=I \\
+\to C^{-1}CZ=C^{-1}I \\
+\to \boxed{Z=C^{-1}}$
+
+3. $AW+BY=I$
+   $AW=I \\
+\to A^{-1}AW=A^{-1}I \\
+\to \boxed{W=A^{-1}}$
+
+4. $AX+BZ=0$
+   $AX=-BZ \\
+\to A^{-1}AX=-A^{-1}BC^{-1} \\
+\to \boxed{X=A^{-1}BC^{-1}}$
+
+$$
+\begin{pmatrix}A & B\\0 & C\end{pmatrix}^{-1}=
+\textcolor{red}{\begin{pmatrix}
+A{-1} & A^{-1}BC^{-1} \\
+0 & C^{-1}
+\end{pmatrix}}
+$$
+
 Topic 3: Application: The LU Factorization
 Lesson 1: Solving Linear Systems with the LU Factorization
 Lesson 2: Computing the LU Factorization
